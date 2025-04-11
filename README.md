@@ -15,33 +15,52 @@ Draw.io - For visualizing the database schema and relationships
 
 
 Prerequisites
+
 To successfully complete this project, you should be comfortable with:
+
 Understanding the basics of MySQL
+
 Creating tables in MySQL with the appropriate data types
+
 Managing MySQL users and applying security best practices
+
 Project Objective
+
 Your goal is to build a relational database that stores information about the bookstore's operations, including books, authors, customers, orders, shipping, and more. You will create a database that efficiently stores all necessary data and allows for quick retrieval and analysis.
 
 
 Step-by-Step Instructions
+
 Create a new database to store bookstore data.
+
 Determine the table schema and data types
+
 Write the SQL commands to create tables that match the data structure
+
 Set up user groups and roles to control access to the database
+
 Test the database by running queries to retrieve and analyze the data
 
 
 Expected Outcomes
+
 By completing this SQL project, you'll gain practical experience and valuable, transferable skills, including:
+
 Designing and implementing a MySQL database for a real-world use case
+
 Creating tables with the optimal schema and data types for the dataset
+
 Managing database access through user groups and roles to ensure security
+
 Querying the data to extract meaningful insights 
 
 
 Tables to Be Created
+
 Here are the key tables that you'll design and implement for the bookstore database:
+
 book: A list of all books available in the store.
+
 
 
 book_author: A table to manage the many-to-many relationship between books and authors.
@@ -87,7 +106,9 @@ order_status: A list of possible statuses for an order (e.g., pending, shipped, 
 
 
 How to Submit.
+
 The group leader should create a GitHub repository.
+
 Deadline: 13/04/2025 11:59 pm EAT
 
 
