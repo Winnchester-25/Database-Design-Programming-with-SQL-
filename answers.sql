@@ -27,18 +27,18 @@ CREATE TABLE bookAuthor(
     authorID INT NOT NULL,
     PRIMARY KEY (bookID, authorID),
     FOREIGN KEY (bookID) REFERENCES book(bookID),
-    FOREIGN KEY (authorID) REFERENCES author(authorID),
+    FOREIGN KEY (authorID) REFERENCES author(authorID)
 );
 
 
 CREATE TABLE bookLanguage(
-    langaugeID INT AUTO_INCREMENT NOT NULL,
+    languageID INT AUTO_INCREMENT NOT NULL,
     languageName VARCHAR(50) NOT NULL,
     PRIMARY KEY (languageID)
 );
 
 CREATE TABLE publisher(
-    pubisherID INT AUTO_INCREMENT NOT NULL,
+    publisherID INT AUTO_INCREMENT NOT NULL,
     name VARCHAR(100) NOT NULL,
     PRIMARY KEY (publisherID)
 
@@ -66,10 +66,10 @@ CREATE TABLE customerAddress(
 
 CREATE TABLE address(
     addressID INT AUTO_INCREMENT NOT NULL,
-    strett VARCHAR(100) NOT NULL,
+    street VARCHAR(100) NOT NULL,
     city VARCHAR(50) NOT NULL,
     postalCode VARCHAR(20) NOT NULL,
-    countryID VARCHAR(50) NOT NULL,
+    countryID INT NOT NULL,
     PRIMARY KEY (addressID),   
     FOREIGN KEY (countryID) REFERENCES country(countryID)
 );
@@ -95,7 +95,8 @@ CREATE TABLE custOrder(
     orderStatusID INT NOT NULL,
     PRIMARY KEY (orderID),
     FOREIGN KEY (customerID) REFERENCES customer(customerID),
-    FOREIGN KEY (orderStatusID) REFERENCES addressStatus(statusID)
+    FOREIGN KEY (orderStatusID) REFERENCES orderStatus(statusID)
+
 );
 
 CREATE TABLE orderLine(
@@ -129,6 +130,8 @@ CREATE TABLE orderHistory(
     statusID INT NOT NULL,
     timestamp DATETIME NOT NULL,
     PRIMARY KEY(historyID),
+    FOREIGN KEY (orderID) REFERENCES custOrder(orderID),
+    FOREIGN KEY (statusID) REFERENCES orderStatus(statusID)
 );
 
 
