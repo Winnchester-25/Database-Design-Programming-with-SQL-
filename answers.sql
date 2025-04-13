@@ -85,6 +85,7 @@ CREATE TABLE country(
     countryID INT AUTO_INCREMENT NOT NULL,
     countryName VARCHAR(50) NOT NULL,
     PRIMARY KEY (countryID)
+    
 );
 
 CREATE TABLE custOrder(
